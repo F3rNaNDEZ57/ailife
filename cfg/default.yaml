@@ -1,0 +1,25 @@
+# Simulation parameters
+seed: null          # set an integer for reproducible runs; null = random
+
+world:
+  width: 80         # grid cells
+  height: 60        # grid cells
+  cell_size: 10     # pixels per cell (render)
+  initial_food: 600
+  food_spawn_per_step: 3   # attempts per sim step
+  max_food: 2000
+
+agents:
+  count: 25
+  start_energy: 100.0
+  move_cost: 0.5
+  eat_energy: 30.0
+  speed: 1                # cells per sim step
+  vision: 6               # in cells (Manhattan radius)
+  behavior: "greedy"      # "greedy" or "random"
+
+engine:
+  dt: 0.1                 # fixed simulation step (seconds)
+  max_fps: 60             # render cap
+  log_every_steps: 10
+  screenshot_every_steps: 0   # 0 = off
